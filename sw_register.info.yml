@@ -3,3 +3,4 @@ type: module
 description: Registers a Service Worker script.
 core: 8.x
 package: PWA
+configure: sw_register.settings_form

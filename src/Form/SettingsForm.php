@@ -34,7 +34,7 @@ class SettingsForm extends ConfigFormBase {
     $form['service_worker_js_script_path'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Path to your Service Worker script'),
-      '#description' => $this->t('Enter a relative path to your service_worker.js (from the site root), e.g. /sites/default/files/sw.js'),
+      '#description' => $this->t('Enter a relative path to your service-worker.js (from the site root), e.g. sites/default/files/service-worker.js'),
       '#maxlength' => 128,
       '#size' => 64,
       '#default_value' => $config->get('service_worker_js_script_path'),

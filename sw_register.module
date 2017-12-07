@@ -17,7 +17,7 @@ function sw_register_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.sw_register':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Registers custom Service Worker script.') . '</p>';
+      $output .= '<p>' . t('Registers a Service Worker script.') . '</p>';
       return $output;
 
     default:

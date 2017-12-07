@@ -5,4 +5,4 @@ your site should have a valid SSL certificate or its domain should be "localhost
 
 In order to register your service worker script go to
 Home -> Administration -> Configuration -> Service Worker Registration Settings and
-enter a relative path to your service-worker.js (from the site root), e.g. sites/default/service-worker.js.
+enter a relative path to your service-worker.js (from the site root), e.g. sites/default/files/service-worker.js
