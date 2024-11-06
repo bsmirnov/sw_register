@@ -1,0 +1,43 @@
+{
+  "name": "drupal/sw_register",
+  "description": "Registers a Service Worker script for Progressive Web App (PWA) functionality in Drupal sites",
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "drupal/core": "^9.4 || ^10"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Boris Smirnov",
+      "homepage": "https://www.drupal.org/u/bsmirnov",
+      "role": "Maintainer"
+    },
+
+  ],
+  "homepage": "https://drupal.org/project/sw_register",
+  "support": {
+    "issues": "https://drupal.org/project/issues/sw_register",
+    "source": "https://git.drupalcode.org/project/sw_register"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-2.0.x": "2.0.x-dev"
+    },
+    "drupal": {
+      "version": "2.0.x-dev",
+      "package": "PWA",
+      "configuration": {
+        "configure": "sw_register.settings_form"
+      }
+    }
+  },
+  "keywords": [
+    "Drupal",
+    "Service Worker",
+    "PWA",
+    "Progressive Web App",
+    "Offline"
+  ]
+}
