@@ -1,18 +1,24 @@
-(function (window, navigator, drupalSettings) {
+((window, navigator, drupalSettings) => {
+  'use strict';
 
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register(drupalSettings.sw_register.path).then(function(registration) {
-                // Registration was successful.
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
-                // Registration failed.
-                console.error('ServiceWorker registration failed: ', err);
-            });
-        });
+  Drupal.behaviors.serviceWorkerRegister = {
+    attach: function (context, settings) {
+      once('sw-register', 'body', context).forEach(function () {
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register(drupalSettings.sw_register.path)
+              .then((registration) => {
+                console.log('ServiceWorker registration successful with scope:', registration.scope);
+              })
+              .catch((error) => {
+                console.error('ServiceWorker registration failed:', error);
+              });
+          });
+        }
+        else {
+          console.warn('ServiceWorker is not supported in this browser.');
+        }
+      });
     }
-    else {
-        console.error('ServiceWorker is not supported.');
-    }
-
+  };
 })(window, navigator, drupalSettings);

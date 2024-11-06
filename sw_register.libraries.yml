@@ -1,6 +1,8 @@
 register:
   version: 1.x
   js:
-      js/register.js: {}
+    js/register.js: { minified: true }
   dependencies:
+    - core/drupal
     - core/drupalSettings
+    - core/once
